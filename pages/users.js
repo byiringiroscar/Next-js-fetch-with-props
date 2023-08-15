@@ -1,6 +1,11 @@
+import { useRouter } from "next/router";
+
+
 const UserList = ({ users }) => {
+    const router = useRouter()
     return <>
         <h1>List of Users</h1>
+        <button onClick={() => router.push('/')}>Go Home</button>
         {
             users.map(user => {
                 return <div key={user.id}>
