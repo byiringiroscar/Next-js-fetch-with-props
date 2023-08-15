@@ -1,12 +1,11 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import User from "@/components/user";
 
 
 const UserList = ({ users }) => {
-    const router = useRouter()
     return <>
         <h1>List of Users</h1>
-        <button onClick={() => router.push('/')}>Go Home</button>
+        <Link href="/">Go home</Link>
         {
             users.map(user => {
                 return <div key={user.id}>

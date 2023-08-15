@@ -1,10 +1,12 @@
-import { useRouter } from "next/router"
+import Link from "next/link"
 
 const Home = () => {
-  const router = useRouter()
   return <>
     <h1>Next Js pre-rendering</h1>
-    <button onClick={() => router.push('/users')}>Users</button>
+    <Link href="/users">
+      Go to Users
+    </Link>
+    
   </>
 }
 
