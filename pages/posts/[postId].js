@@ -10,6 +10,17 @@ const Post = ({ post }) => {
 
 export default Post;
 
+export const getStaticPaths = async() => {
+    return {
+        paths: [
+            { params: { postId: '1' } },
+            { params: { postId: '2' } },
+            { params: { postId: '3' } },
+        ],
+        fallback: false
+    }
+}
+
 
 export const getStaticProps = async(context) => {
     const { params } = context
