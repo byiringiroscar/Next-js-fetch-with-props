@@ -6,6 +6,7 @@ const Home = () => {
     <Link href="/users">
       Go to Users
     </Link>
+    <Link href="/posts">Go to posts</Link>
     
   </>
 }
